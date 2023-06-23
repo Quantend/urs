@@ -1,0 +1,175 @@
+/* NavBar */
+nav {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background: #f2f2f2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #0f2a5c;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media (max-width: 400px){
+  nav .logo{
+    font-size: 25px;
+  }
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  z-index: 99; /* Verhoog de z-index-waarde. Zodat meldingen achter het hamburger menu blijven*/
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #032e60;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #de006a;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 1400px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  } 
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #de006a;
+  }
+  nav .logo{
+    color: #0f2a5c;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+/* Scroll Blocker */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* factuur.css */
+
+#factuurForm {
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select, button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+#factuurDetails {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+#factuurDetails:empty {
+  display: none;
+}
+
+#download {
+  display: block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#download:hover {
+  background-color: #45a049;
+}

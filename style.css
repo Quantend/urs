@@ -1,0 +1,197 @@
+/* Pagina achtergrond */
+body {
+  background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.86)), url('https://www.kernarchitecten.com/thumb/c1170x790/media/images/projecten_2015/14042_gilde_opleidingen/14042_gilde_bestaand.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* NavBar */
+nav {
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background: #f2f2f2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #0f2a5c;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media (max-width: 400px){
+  nav .logo{
+    font-size: 25px;
+  }
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  z-index: 99; /* Verhoog de z-index-waarde. Zodat meldingen achter het hamburger menu blijven*/
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #032e60;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #de006a;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 1400px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  } 
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: #de006a;
+  }
+  nav .logo{
+    color: #0f2a5c;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+/* Scroll Blocker */
+.no-scroll {
+  overflow: hidden;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color:#032e60;
+  text-decoration: none;
+  text-decoration-color: none;
+}
+  footer a{
+   color: white;
+   text-decoration: none;
+   font: 12px Montserrat, sans-serif;
+   margin-bottom: 3px
+}
+   footer a:hover {
+    color: #de006a;
+ }
+
+   /* Titel */
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+  color: #333;
+  
+}
+h2 {
+  margin-bottom: 9px;
+  margin-left: 5px;
+  font-size: 28px;
+  color: #333;
+}
+@media (max-width: 650px){
+  h1{
+    font-size: 30px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+}
+
+p{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2em;
+  color: #333;
+}
+#home-container{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  box-shadow: 5px 5px 10px #ccc, -5px -5px 10px #ccc;
+}
+#main_tabel{
+margin: 50px auto;
+width: 90%;
+  max-width: 9000px;
+}
+
+/* Footer op bodem houden*/
+main {
+  margin: 0 auto;
+  min-height: calc(100vh - 211px - 58px);
+}

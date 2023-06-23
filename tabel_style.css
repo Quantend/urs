@@ -1,0 +1,80 @@
+
+/* CSS voor de tabel */
+table {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #ccc, -1px -1px 4px #ccc;
+    padding: 20px;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-container {
+    border: 1px solid #cbc9c9;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #ccc, -1px -1px 4px #ccc;
+    cursor: pointer;
+  }
+  .table-container.active {
+    background: rgba(255,255,255,0.3);
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+  }
+
+  table th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    margin-right: auto;
+    
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+
+/* Responsieve styling */
+@media screen and (max-width: 800px) {
+  table {
+    font-size: 12px;
+    width: 100%;
+    white-space: nowrap;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    border: 1px solid #cbc9c9;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px #ccc, -1px -1px 4px #ccc;
+  }
+
+  th, td {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+  }
+}
+
+/*Zoeken*/
+#search {
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  padding: 2px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
